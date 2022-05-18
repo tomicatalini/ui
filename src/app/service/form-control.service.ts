@@ -10,14 +10,25 @@ export class FormControlService {
 
   constructor() { }
 
-  toFormGroup(questions: FormBase<String>[] ) {
+  toFormGroup(formBase: FormBase<String>[] ) {
     const group: any = {};
+    const algo: any = [];
 
-    questions.forEach( question => {
-      group[question.group] = question.required ? new FormControl('', Validators.required)
+    console.warn('formControlService');
+    console.log(formBase);
+    formBase.forEach( formBase => {
+      group[formBase.group] = formBase.required ? new FormControl('', Validators.required)
                                               : new FormControl('');
+      algo.push(          formBase.required ? new FormControl('', Validators.required) : new FormControl('')
+      );
     });
+
+    console.log(algo);
+    console.log(group);
+    console.warn('formControlService');
+    console.log(new FormGroup(algo));
     
-    return new FormGroup(group);
+    /* return new FormGroup(group); */
+    return new FormGroup(algo);
   }
 }

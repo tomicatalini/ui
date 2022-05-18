@@ -3,13 +3,13 @@
   
     <div [ngSwitch]="formBase.controlType">
   
-      <input *ngSwitchCase="'textbox'" [formControlName]="formBase.field" [id]="formBase.field" [type]="formBase.type">
+      <input *ngSwitchCase="'input'" [formControlName]="formBase.field" [id]="formBase.field" [type]="formBase.type">
   
       <select *ngSwitchCase="'dropdown'" [id]="formBase.field"  [formControlName]="formBase.field">
         <option *ngFor="let opt of formBase.options" [value]="opt.key">{{opt.value}}</option>
       </select>
 
-      <div *ngSwitchCase="'radio-button'">
+      <div *ngSwitchCase="'radio'">
           <div *ngFor="let opt of formBase.options">
               <input  [formControlName]="formBase.field" [id]="opt.key" [type]="formBase.type" [value]="opt.value">  {{opt.key}}
           </div>

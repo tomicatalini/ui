@@ -19,7 +19,6 @@ export class DynamicFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.fcs.toFormGroup( this.formBase as FormBase<string>[] )
-    console.log(this.form);
   }
 
   onSubmit(){

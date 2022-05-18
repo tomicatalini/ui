@@ -44,8 +44,8 @@ export class FormService {
         "field": "sexo",
         "class": "Persona",
         "label": "Genero",
-        "controlType": "input",
-        "type": "radio-button",
+        "controlType": "radio",
+        "type": "radio",
         "required": true,
         "order": 3,
         "group": "",
@@ -94,7 +94,7 @@ export class FormService {
         "field": "nacionalidad",
         "class": "Pais",
         "label": "Nacionalidad",
-        "controlType": "dropdow",
+        "controlType": "dropdown",
         "type": "select",
         "required": false,
         "order": 6,
@@ -117,6 +117,8 @@ export class FormService {
 
     ];
 
-    return of( structure.sort( (a,b) => a.order - b.order ) );
+    /* return of( structure.sort( (a,b) => a.order - b.order ) ); */
+    console.log(structure);
+    return of(structure);
   }
 }

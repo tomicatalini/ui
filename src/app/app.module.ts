@@ -43,12 +43,6 @@ import { FormBase } from './model/FormBase';
   providers: [ PersonasService, FormService ], //Servicios que vamos a ir usando
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-    structure$: Observable<FormBase<any>[]>;
-
-    constructor( service: FormService){
-      this.structure$ = service.getStructure("Persona");
-    }
+export class AppModule {    
 
  }

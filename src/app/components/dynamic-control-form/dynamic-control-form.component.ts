@@ -17,6 +17,6 @@ export class DynamicControlFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  get isValid() { return this.form.controls[this.formBase.group].valid; }
+  get isValid() { return this.form.controls[0].valid; }
 
 }
