@@ -1,0 +1,17 @@
+<div>
+    <script>console.log("hola")</script>
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+      <div *ngFor="let opt of formBase" class="form-row">
+        <script>console.log(opt)</script>
+        <app-dynamic-control-form [formBase]="opt" [form]="form"></app-dynamic-control-form>
+      </div>
+  
+      <div class="form-row">
+        <button type="submit" [disabled]="!form.valid">Save</button>
+      </div>
+    </form>
+  
+    <div *ngIf="payLoad" class="form-row">
+      <strong>Saved the following values</strong><br>{{payLoad}}
+    </div>
+  </div>

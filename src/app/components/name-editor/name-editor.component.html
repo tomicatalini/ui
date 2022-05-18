@@ -1,0 +1,19 @@
+<label for="name">Nombre: </label>
+<input id="name" type="text" [formControl]="name">
+
+<label for="name">Apellido: </label>
+<input id="name" type="text" [formControl]="surname">
+<label for="sex">Sexo: </label>
+<input id="sex" type="radio" [formControl]="surname">
+<input id="sex" type="radio" [formControl]="surname">
+<input id="sex" type="radio" [formControl]="surname">
+<label for="name">Apellido: </label>
+<input id="name" type="text" [formControl]="surname">
+<label for="name">Apellido: </label>
+<input id="name" type="text" [formControl]="surname">
+<label for="name">Apellido: </label>
+<input id="name" type="text" [formControl]="surname">
+
+<button type="button" (click)="updateName()">Update Name</button>
+
+<p>Value: {{ name.value }}</p>
